@@ -2,7 +2,10 @@ from circleshape import *
 from constants import *
 
 class Player(CircleShape):
+
+    container = ()
     def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self, *self.containers)
         super().__init__(x, y, PLAYER_RADIUS)
         self.rotation = 0
 
